@@ -6,7 +6,7 @@ function AtomDrawing(props){
     const nucleus: Circle = <Circle bgColor={"#F4E310"}/>
     const shell1: Ring = <Ring diameter = {200}/>
     const shell2: Ring = <Ring diameter = {300}/>
-    
+
     return (
         <>
         <html>
@@ -19,6 +19,9 @@ function AtomDrawing(props){
                     {shell1}
                     {shell2}
                     {nucleus}
+                </div>
+                <div id = "containter">
+                    
                 </div>
             </body>
         </html>
