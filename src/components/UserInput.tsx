@@ -9,12 +9,12 @@ function UserInput(){
 <>
     <label>
         Amount of Protons:
-        <input name = "protonNum" defaultValue="0"/>
+        <input name = "protonNum" value={protons} onChange={e => setProtons(Number(e.target.value))}/>
         Amount of Neutrons:
-        <input name = "neutronNum" defaultValue="0"/>
+        <input name = "neutronNum" value={neutrons} onChange={e => setNeutrons(Number(e.target.value))}/>
         Amount of Electrons:
-        <input name = "electronNum" defaultValue="0"/>
-        
+        <input name = "electronNum" value={electrons} onChange={e => setElectrons(Number(e.target.value))}/>
+
     </label>
 </>
     )
