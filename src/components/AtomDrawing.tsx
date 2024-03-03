@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function AtomDrawing(props){
     const nucleus: Circle = <Circle diameter={100}bgColor={"#F4E310"}/>
-    const noElement = new Element("No element found",0,0,0,0);
+    const noElement = new Element("No element found",0,0,0,0, "");
     const [shells, setShells] = useState([{diameter: 0, electrons: 0}]);
     const [diam, setDiam] = useState(200);
     const [element, setElement] = useState(noElement);
@@ -44,10 +44,11 @@ function AtomDrawing(props){
                 
                 {shelements}
                 {nucleus}
-                
+                <img src={element.image}  alt={element.name}/>
             </div>
             <div id = "container"></div>
             {element.name}
+            {element.image}
         </>
     )
 }

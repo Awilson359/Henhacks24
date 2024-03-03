@@ -1,4 +1,4 @@
-export default function Circle(props) {
+export default function Ring(props) {
     const circleStyle = {
         padding:10,
         margin:20,
@@ -8,6 +8,7 @@ export default function Circle(props) {
         width: props.diameter,
         height: props.diameter,
     }
+
     return (
         <div style={circleStyle}>
         </div>
