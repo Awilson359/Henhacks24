@@ -1,5 +1,6 @@
+import { useState } from "react";
 export default function Ring(props) {
-    const circleStyle = {
+    const ringStyle = {
         padding:10,
         margin:20,
         display:"inline-block",
@@ -8,9 +9,11 @@ export default function Ring(props) {
         width: props.diameter,
         height: props.diameter,
     }
-
+    
+  
     return (
-        <div style={circleStyle}>
+        <div style={ringStyle}>
+            
         </div>
     );
 }

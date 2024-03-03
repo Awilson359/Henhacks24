@@ -8,7 +8,7 @@ import { useState } from "react";
 function AtomDrawing(props){
     const nucleus: Circle = <Circle diameter={100}bgColor={"#F4E310"}/>
     const noElement = new Element("No element found",0,0,0,0, "");
-    const [shells, setShells] = useState([{diameter: 0, electrons: 0}]);
+    const [shells, setShells] = useState([0]);
     const [diam, setDiam] = useState(200);
     const [element, setElement] = useState(noElement);
 
@@ -26,25 +26,25 @@ function AtomDrawing(props){
     function drawShells(){
         for (let i = 1; i < element.shells+1; i++) {
             console.log(shells)
-            setShells([...shells, {diameter: diam, electrons: 2*i*i}])
-            setDiam(diam+100);
+            setShells([...shells, diam])
+            setDiam(diam+200);
         }
     }
-    
+
     const shelements = shells.map(diam => {
         return <Ring diameter = {diam}/>;
     })
 
 
-    
+
     return (
         <>
             <button type="submit" onClick={findElement}>Draw Atom</button>
             <div id = "container">
-                
+
                 {shelements}
                 {nucleus}
-                <img src={element.image}  alt={element.name}/>
+                <img src={element.image}  alt={element.name} height={475}/>
             </div>
             <div id = "container"></div>
             {element.name}
