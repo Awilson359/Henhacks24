@@ -5,8 +5,8 @@ export default function Circle(props) {
         display:"inline-block",
         backgroundColor: props.bgColor,
         borderRadius: "50%",
-        width:100,
-        height:100,
+        width:props.diameter,
+        height:props.diameter,
     }
     return (
         <div style={circleStyle}>

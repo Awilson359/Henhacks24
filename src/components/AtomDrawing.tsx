@@ -6,7 +6,7 @@ import { useState } from "react";
 // props.element.protons
 
 function AtomDrawing(props){
-    const nucleus: Circle = <Circle bgColor={"#F4E310"}/>
+    const nucleus: Circle = <Circle diameter={100}bgColor={"#F4E310"}/>
     const noElement = new Element("No element found",0,0,0,0);
     const [shells, setShells] = useState([0]);
     const [diam, setDiam] = useState(200);
